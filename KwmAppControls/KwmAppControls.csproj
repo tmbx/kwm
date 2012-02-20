@@ -1,0 +1,448 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CDC4B09-D50D-4197-978F-4EC0524BCB50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kwm.KwmAppControls</RootNamespace>
+    <AssemblyName>KwmAppControls</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseP|AnyCPU' ">
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugP|AnyCPU' ">
+    <OutputPath>bin\Debug - Publish\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UnitTests|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppAppSharing\AppScreenSharing.cs" />
+    <Compile Include="AppAppSharing\AppScreenSharingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\AppScreenSharingControl.Designer.cs">
+      <DependentUpon>AppScreenSharingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAppSharing\AppSsNotificationItem.cs" />
+    <Compile Include="AppAppSharing\NewSession1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSession1.Designer.cs">
+      <DependentUpon>NewSession1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSession2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSession2.Designer.cs">
+      <DependentUpon>NewSession2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSession3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSession3.Designer.cs">
+      <DependentUpon>NewSession3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSessionFinish.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSessionFinish.Designer.cs">
+      <DependentUpon>NewSessionFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSessionWelcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSessionWelcome.Designer.cs">
+      <DependentUpon>NewSessionWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAppSharing\NewSessionWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\RunningOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\RunningOverlay.Designer.cs">
+      <DependentUpon>RunningOverlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAppSharing\RunningOverlayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\RunningOverlayControl.Designer.cs">
+      <DependentUpon>RunningOverlayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAppSharing\SupportModeWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppAppSharing\SupportModeWarning.Designer.cs">
+      <DependentUpon>SupportModeWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppChatBox\AppChatBox.cs" />
+    <Compile Include="AppChatBox\AppChatboxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppChatBox\AppChatboxControl.designer.cs">
+      <DependentUpon>AppChatboxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppChatBox\ChatNotificationItem.cs" />
+    <Compile Include="AppKfs\AppKfs.cs" />
+    <Compile Include="AppKfs\AppKfsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppKfs\AppKfsControl.Designer.cs">
+      <DependentUpon>AppKfsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppKfs\AppKfsNotificationItem.cs" />
+    <Compile Include="AppKfs\FrmConflictResolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppKfs\FrmConflictResolution.designer.cs">
+      <DependentUpon>FrmConflictResolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppKfs\FrmResolveTypeConflict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppKfs\FrmResolveTypeConflict.Designer.cs">
+      <DependentUpon>FrmResolveTypeConflict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppKfs\ImageListManager.cs" />
+    <Compile Include="AppKfs\KfsDownloadManager.cs" />
+    <Compile Include="AppKfs\KfsGate.cs" />
+    <Compile Include="AppKfs\KfsLocalView.cs" />
+    <Compile Include="AppKfs\KfsTransfers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppKfs\KfsTransfers.Designer.cs">
+      <DependentUpon>KfsTransfers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppKfs\KfsUtils.cs" />
+    <Compile Include="AppKfs\KfsPhase1Op.cs" />
+    <Compile Include="AppKfs\KfsPipeline.cs" />
+    <Compile Include="AppKfs\KfsServerOp.cs" />
+    <Compile Include="AppKfs\KfsServerView.cs" />
+    <Compile Include="AppKfs\KfsStatusView.cs" />
+    <Compile Include="AppKfs\KfsTransfer.cs" />
+    <Compile Include="AppKfs\KfsUploadManager.cs" />
+    <Compile Include="AppKfs\KListViewItem.cs" />
+    <Compile Include="AppKfs\KfsScan.cs" />
+    <Compile Include="AppKfs\KTreeviewNode.cs" />
+    <Compile Include="AppKfs\ListViewSorter.cs" />
+    <Compile Include="AppPublicBridge\AppPublicBridge.cs" />
+    <Compile Include="Controls\CustomListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomListViewItem.cs" />
+    <Compile Include="Controls\CustomListViewSubItem.cs" />
+    <Compile Include="Controls\frmKMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmKMsgBox.Designer.cs">
+      <DependentUpon>frmKMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\KTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PromptedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\BaseAppControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Misc\BaseAppControl.Designer.cs">
+      <DependentUpon>BaseAppControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\DeprecatedClasses.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\CollectionWrapper.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\DictionarySet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\EnumerableWrapper.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\EnumeratorWrapper.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\HashedSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\HybridSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\ImmutableSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\ISet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\ListSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\ListWrapper.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\Set.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\SetWrapper.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections.Generic\SortedSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections\DictionarySet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections\HashedSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections\HybridSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections\ImmutableSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections\ISet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections\ListSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections\Set.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections\SortedSet.cs" />
+    <Compile Include="Misc\Iesi\Iesi.Collections\SynchronizedSet.cs" />
+    <Compile Include="Misc\KwmApplicationSettings.cs" />
+    <Compile Include="Misc\KwsApp.cs" />
+    <Compile Include="Misc\KwsDefs.cs" />
+    <Compile Include="Misc\Misc.cs" />
+    <Compile Include="Misc\NewDocument.cs" />
+    <Compile Include="Misc\NotificationItem.cs" />
+    <Compile Include="Misc\OpenFileThread.cs" />
+    <Compile Include="Misc\Test.cs" />
+    <Compile Include="Misc\Tunnel.cs" />
+    <Compile Include="Misc\WmLocalDb.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppKfs\KfsShare.cs" />
+    <Compile Include="AppKfs\KfsMetaDataManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppAppSharing\AppScreenSharingControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AppScreenSharingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppChatBox\AppChatboxControl.resx">
+      <DependentUpon>AppChatboxControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\share.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppAppSharing\NewSession1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewSession1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAppSharing\NewSession2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewSession2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAppSharing\NewSession3.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewSession3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAppSharing\NewSessionFinish.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewSessionFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAppSharing\NewSessionWelcome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewSessionWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAppSharing\NewSessionWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewSessionWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAppSharing\RunningOverlay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RunningOverlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAppSharing\RunningOverlayControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RunningOverlayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAppSharing\SupportModeWarning.resx">
+      <DependentUpon>SupportModeWarning.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppKfs\AppKfsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AppKfsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppKfs\FrmConflictResolution.resx">
+      <DependentUpon>FrmConflictResolution.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppKfs\FrmResolveTypeConflict.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmResolveTypeConflict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppKfs\KfsTransfers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KfsTransfers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmKMsgBox.resx">
+      <DependentUpon>frmKMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\circle.bmp">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\color.bmp" />
+    <EmbeddedResource Include="Resources\fileopen.png" />
+    <EmbeddedResource Include="Resources\filesave.png" />
+    <EmbeddedResource Include="Resources\freehand.bmp" />
+    <EmbeddedResource Include="Resources\line.bmp" />
+    <None Include="Resources\btnAddFiles.png" />
+    <None Include="Resources\%24this.BackgroundImage.bmp" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\11.jpg" />
+    <None Include="Resources\Application-48x48.png" />
+    <Content Include="Misc\Iesi\Iesi.Collections.Generic\Iesi.Collections.Generic.csproj" />
+    <Content Include="Misc\Iesi\Iesi.Collections.Generic\Iesi.Collections.Generic.resharper.user" />
+    <Content Include="Misc\Iesi\Iesi.Collections\Iesi.Collections-1.1.csproj" />
+    <Content Include="Misc\Iesi\Iesi.Collections\Iesi.Collections.csproj" />
+    <Content Include="Misc\Iesi\Iesi.Collections\Iesi.Collections.license.txt" />
+    <Content Include="Misc\Iesi\Iesi.Collections\NamespaceSummary.xml" />
+    <Content Include="Resources\btnSyncAll.png" />
+    <Content Include="Resources\btnViewOfflineFiles.ico" />
+    <None Include="Resources\folderClosed.bmp" />
+    <None Include="Resources\folderOpened.bmp" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\Teambox.ico" />
+    <None Include="Resources\full.png" />
+    <None Include="Resources\empty.png" />
+    <Content Include="Resources\Flip3D-64x64.png" />
+    <None Include="Resources\left-banner.png" />
+    <None Include="Resources\ImportGen-32x32.png" />
+    <None Include="Resources\ImportGen-16x16.png" />
+    <Content Include="Resources\miter.bmp" />
+    <Content Include="Resources\move_drop.ico" />
+    <None Include="Resources\NewSS.png" />
+    <None Include="Resources\newfolder-48x48.png" />
+    <None Include="Resources\newfolder-16x16.png" />
+    <Content Include="Resources\round.bmp" />
+    <None Include="Resources\Teambox.ico" />
+    <None Include="Resources\Teambox.24.png" />
+    <None Include="Resources\warning-48x48.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\Upload.png" />
+    <EmbeddedResource Include="Resources\toserver-grey.jpg" />
+    <EmbeddedResource Include="Resources\toserver.jpg" />
+    <EmbeddedResource Include="Resources\tolocal-grey.jpg" />
+    <EmbeddedResource Include="Resources\tolocal.jpg" />
+    <EmbeddedResource Include="Resources\square.bmp">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\strokeConfig.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\csutils\TbxUtils\TbxUtils.csproj">
+      <Project>{0D3CAB77-329F-483B-883A-C8B2E7D9CC3E}</Project>
+      <Name>TbxUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\csutils\Wizard.Controls\Wizard.Controls.csproj">
+      <Project>{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}</Project>
+      <Name>Wizard.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\csutils\Wizard.UI\Wizard.UI.csproj">
+      <Project>{80614F74-563D-418E-9BF6-1294F73521C0}</Project>
+      <Name>Wizard.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Misc\Iesi\Iesi.Collections.Generic\Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
